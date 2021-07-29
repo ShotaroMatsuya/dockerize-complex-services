@@ -1,5 +1,6 @@
-language: generic
 sudo: required
+language: generic
+
 services:
   - docker
 
@@ -22,7 +23,6 @@ after_success:
   - docker push shotaromatsuya/multi-server
   - docker push shotaromatsuya/multi-worker
 
-# deployment for elastic beanstalk !
 deploy:
   provider: elasticbeanstalk
   region: 'ap-northeast-1'
